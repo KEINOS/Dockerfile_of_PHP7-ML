@@ -1,0 +1,12 @@
+# Test file for Docker Cloud Automated Build
+# ==========================================
+# Local usage:
+#   $ docker-compose -f docker-compose.test.yml up --build
+#
+# Note: Don't forget to remove built "*_sut" image after the test.
+#   $ docker image rm dockerfile_of_php7-ml_sut
+sut:
+  build: .
+  volumes:
+    - ./run-sample.sh:/app/run-sample.sh
+  entrypoint: /app/run-sample.sh
