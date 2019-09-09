@@ -1,25 +1,28 @@
+[![](https://images.microbadger.com/badges/image/keinos/php7-ml.svg)](https://microbadger.com/images/keinos/php7-ml "View image info on microbadger.com")
 [![](https://img.shields.io/docker/cloud/automated/keinos/php7-ml)](https://hub.docker.com/r/keinos/php7-ml "Docker Cloud Automated build")
 [![](https://img.shields.io/docker/cloud/build/keinos/php7-ml)](https://hub.docker.com/r/keinos/php7-ml/builds "Docker Cloud Build Status")
 
 # Dockerfile of PHP7-ML
 
-Dockerfile of PHP-ML, the Machine Learning Library for PHP, on Alpine Linux.
+Dockerfile of [PHP-ML](https://php-ml.org/), the Machine Learning library for PHP, on Alpine Linux.
 
 ```bash
 docker pull keinos/php7-ml:latest
 ```
 
-## Basic Info
+## Basic Image Info
 
 - Source: https://github.com/KEINOS/Dockerfile_of_PHP7-ML @ GitHub
 - Image: https://hub.docker.com/r/keinos/php7-ml @ Docker Hub
-  - Target architecture: x86_64 (Intel, AMD)
+  - Target architecture: x86_64 (Intel. Maybe AMD too but ARM)
 - Base Image: [keinos/php7-composer-alpine](https://hub.docker.com/r/keinos/php7-composer-alpine)
 - User: `www-data`
 - Entry Point: not set
 - Composer: Installed under `/usr/bin/composer`
 - Working Directory: `/app` (alias of `/home/www-data`)
-- PHP-ML: Installed under `/app/vendor/ai` via composer
+- PHP-ML: Installed under `/app/vendor/php-ai` via composer
+  - Ref: [Repo](https://github.com/php-ai/php-ml) @ GitHub
+  - Ref: [Docs](https://php-ml.readthedocs.io/en/latest/) @ ReadTheDocs
 - `/app/composer.json` :
 
     ```json
